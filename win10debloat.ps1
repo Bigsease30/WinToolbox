@@ -121,19 +121,19 @@ $powertoys.height                = 30
 $powertoys.location              = New-Object System.Drawing.Point(751,105)
 $powertoys.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$winterminal                     = New-Object system.Windows.Forms.Button
-$winterminal.text                = "Windows Terminal"
-$winterminal.width               = 150
-$winterminal.height              = 30
-$winterminal.location            = New-Object System.Drawing.Point(751,61)
-$winterminal.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+$malwarebytes                     = New-Object system.Windows.Forms.Button
+$malwarebytes.text                = "Malwarebytes"
+$malwarebytes.width               = 150
+$malwarebytes.height              = 30
+$malwarebytes.location            = New-Object System.Drawing.Point(751,61)
+$malwarebytes.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$vscode                          = New-Object system.Windows.Forms.Button
-$vscode.text                     = "VS Code"
-$vscode.width                    = 150
-$vscode.height                   = 30
-$vscode.location                 = New-Object System.Drawing.Point(751,19)
-$vscode.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+$ccleaner                          = New-Object system.Windows.Forms.Button
+$ccleaner.text                     = "CCleaner"
+$ccleaner.width                    = 150
+$ccleaner.height                   = 30
+$ccleaner.location                 = New-Object System.Drawing.Point(751,19)
+$ccleaner.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $Label2                          = New-Object system.Windows.Forms.Label
 $Label2.text                     = "(Chocolatey Required for installs)"
@@ -416,7 +416,7 @@ $lightmode.location              = New-Object System.Drawing.Point(417,45)
 $lightmode.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $Form.controls.AddRange(@($Panel1,$Label1,$Panel2,$Label3,$Panel3,$Label4,$Label15,$Panel4,$Label20,$Label21,$Label23,$PictureBox1))
-$Panel1.controls.AddRange(@($installchoco,$brave,$firefox,$7zip,$irfanview,$adobereader,$notepad,$gchrome,$mpc,$vlc,$powertoys,$winterminal,$vscode,$Label2))
+$Panel1.controls.AddRange(@($installchoco,$brave,$firefox,$7zip,$irfanview,$adobereader,$notepad,$gchrome,$mpc,$vlc,$powertoys,$malwarebytes,$ccleaner,$Label2))
 $Panel2.controls.AddRange(@($essentialtweaks,$backgroundapps,$cortana,$windowssearch,$actioncenter,$darkmode,$visualfx,$onedrive,$Label22,$lightmode))
 $Panel3.controls.AddRange(@($securitylow,$securityhigh,$Label5,$Label6,$Label7,$Label8,$Label9,$Label10,$Label11,$Label12,$Label13))
 $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label16,$Label17,$Label18,$Label19))
@@ -476,15 +476,15 @@ $7zip.Add_Click({
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
-$vscode.Add_Click({ 
-    Write-Host "Installing Visual Studio Code"
-    choco install vscode -y
+$ccleaner.Add_Click({ 
+    Write-Host "Installing CCleaner"
+    choco install ccleaner -y
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
-$winterminal.Add_Click({ 
-    Write-Host "Installing New Windows Terminal"
-    choco install microsoft-windows-terminal -y
+$malwarebytes.Add_Click({ 
+    Write-Host "Installing Malwarebytes"
+    choco install malwarebytes -y
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
